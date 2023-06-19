@@ -1,0 +1,54 @@
+@import "utilities";
+@import "fonts";
+@import "mixins";
+@import "functions";
+
+body {
+  background-color: $main-color;
+  color: white;
+  @include theme($main-theme);
+  //   font-size: $main-font;
+  //   background-color: rgba(255, 0, 0, 0.3);
+}
+
+%cart-2 {
+  background-color: yellow;
+}
+
+main {
+  background-color: darken(darkcyan, 15%);
+  height: 30vh;
+  @include cart(50%);
+  section {
+    background-color: aquamarine;
+    @include cart(20%);
+  }
+}
+
+button {
+  border: none;
+  background-color: green;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    background-color: black;
+  }
+}
+
+h1 {
+  font-size: pxToRem(70);
+  @extend %cart-2;
+}
+
+p {
+  font-weight: map-get($font-weights, "bold");
+}
+
+// @media (prefers-color-scheme: dark) {
+//   h1 {
+//     background: #753;
+//     color: #dcb;
+//     outline: 5px dashed #000;
+//   }
+// }

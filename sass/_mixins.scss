@@ -1,0 +1,12 @@
+@mixin cart($size) {
+  width: $size;
+  padding: 30px;
+}
+
+@mixin theme($value) {
+  @if $value == "light" {
+    background-color: blue;
+  } @else {
+    background-color: green;
+  }
+}
